@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<provision reload="6000">
+    <!--tvip_provision_release.xml-->
+    <updates>
+        <update_background force="false" value="false" />
+        <update_force force="true" value="true" />
+        <update_period force="false" value="10800" />
+    </updates>
+    <provision_server name="" />
+    <operator name="Зеленая Бочка, Тамбов" />
+    <logo url="http://mw2.delfintelecom.ru/images/zt_logo.png" />
+    <time tz="Europe/Moscow" ntp="ntp.delfintelecom.ru" />
+    <tv_protocols default="browser">
+        <protocol type="browser" server="http://mw2.delfintelecom.ru:8083/iptv_mag1.php" api="mag" noui="false" />
+    </tv_protocols>
+    <system_locks>
+        <sysinfo_del locked="true" />
+        <shell password="$6$sd32kc2d2$i.8gVIplWm3G//f3PxKNJ3lybIHUVKl39wHzD84cer0kYLLqmQBBvsEUbMdQq2KeA8asWRSHesWpq6T7F1Iye1" />
+    </system_locks>
+    <features>
+        <mediaplayer enabled="true" />
+        <dvr enabled="false" />
+        <cctv enabled="false" />
+        <vod enabled="false" />
+        <navigator enabled="false" />
+    </features>
+    <preferences>
+        <pref_system visible="false" />
+        <pref_network visible="false" />
+        <pref_tv visible="false" />
+    </preferences>
+    <webapps  override="true">
+        <app name="youtube" title="YouTube" uiwidth="1280" uiheight="720" url="https://apps.tvip.ru/apps/youtube/?referrer=about:back" api="youtube" dial_title="YouTube" dial_origin="*.youtube.com" search_script="https://apps.tvip.ru/searchjs/youtube.js"/>
+        <app name="youtube_kids" title="YouTube Kids" uiwidth="1280" uiheight="720" url="https://apps.tvip.ru/apps/youtube_kids/?referrer=about:back" api="youtube"/>
+        <app name="ivi" title="IVI" uiwidth="1280" uiheight="720" url="http://apps.tvip.ru/apps/ivi/?referrer=about:back" api="tvip" />
+    </webapps>
+
+</provision>

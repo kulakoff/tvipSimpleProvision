@@ -1,0 +1,6 @@
+# 0 - other networks
+# 1 - isp networks
+geo $accessvar{
+  default 0;
+  100.64.0.0/16 1;
+}

@@ -1,0 +1,11 @@
+##
+#set 1 to /prov/tvip_provision_test.xml
+#set 2 to /prov/tvip_provision_devel.xml
+map $http_mac_address $allowed_mac{
+default 0;
+"" unset;
+10:27:BE:AA:22:11 1;#s410-demo
+10:27:BE:CC:FA:AA 2;#s410-demo2
+10:27:BE:11:88:55 2;#s605-tech
+10:27:BE:13:13:12 2;#s410SE
+}
