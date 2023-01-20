@@ -1,13 +1,14 @@
-version: '3.9'
+version: '3.8'
 
 services:
   nginx:
     image: nginx:latest
     container_name: tvip_nginx
     volumes:
-      - ./docker/nginx/tvip:/var/www/html/tvip     # TVIP provisions dir
-      - ./docker/nginx/conf.d:/etc/nginx/conf.d    # Nginx config
-      - ./docker/nginx/rules:/etc/nginx/rules      # Nginx ACLs
+      - ./docker/nginx/tvip:/var/www/html/tvip                    # TVIP provisions dir
+      - ./docker/tvipupdate:/var/www/html/tvipupdate             # TVIP local updates mirror https://wiki.tvip.tv/provider_mirror
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d                   # Nginx config
+      - ./docker/nginx/rules:/etc/nginx/rules                     # Nginx ACLs
 
     ports:
       - "80:80"
