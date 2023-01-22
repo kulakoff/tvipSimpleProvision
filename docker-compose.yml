@@ -6,9 +6,12 @@ services:
     container_name: tvip_nginx
     volumes:
       - ./docker/nginx/tvip:/var/www/html/tvip                    # TVIP provisions dir
-      - ./docker/tvipupdate:/var/www/html/tvipupdate             # TVIP local updates mirror https://wiki.tvip.tv/provider_mirror
+      - ./docker/tvipupdate_release:/var/www/html/tvipupdate_release             # TVIP local updates mirror https://wiki.tvip.tv/provider_mirror
+      - ./docker/tvipupdate_test:/var/www/html/tvipupdate_test
       - ./docker/nginx/conf.d:/etc/nginx/conf.d                   # Nginx config
       - ./docker/nginx/rules:/etc/nginx/rules                     # Nginx ACLs
 
     ports:
       - "80:80"
+      - "4298:4298"
+      - "4299:4299"

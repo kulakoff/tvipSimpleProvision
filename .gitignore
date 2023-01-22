@@ -1,2 +1,3 @@
 .idea
-/docker/tvipupdate/*
+/docker/tvipupdate_release/*
+/docker/tvipupdate_test/*
